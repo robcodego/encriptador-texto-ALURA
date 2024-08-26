@@ -172,23 +172,4 @@ footer{
     to {
       transform: rotateY(360deg);
     }
-  }
-/* Definir la animación de escribir */
-@keyframes escribir {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-}
-  
-  /* Animación para el parpadeo del cursor */
-  @keyframes parpadeoCursor {
-    from {
-      border-color: transparent;
-    }
-    to {
-      border-color: black;
-    }
 }

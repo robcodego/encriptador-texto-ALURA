@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="logo" style="position: absolute; left: 1.5%; top: 0%">Encrypt</h1>
+    <div class="wrapper">
+        <div class="wrapper_noencrypt">
+            <div class="wrapper_noencrypt_txt">
+                <textarea name="texto-no-encrypt" id="texto-no-encrypt" placeholder="Ingrese texto aquí"></textarea>
+                <div class="wrapper_noencrypt_rules">
+                    <img src="./assets/bi_exclamation-circle-fill.png" alt="Warning">
+                    <p id="p_warning">Solo se admiten mayúsculas y minúsculas</p>
+                </div>
+            </div>
+            <div class="wrapper_noencrypt_txt_buttons">
+                <input type="submit" value="Encriptar" class="encrypt_button button"> 
+                <input type="submit" value="Desencriptar" class="dencrypt_button button">
+            </div>
+        </div>
+        <div class="wrapper_encrypt">
+            <div class="wrapper_encrypt_text">
+                <div class="wrapper_encrypt_text_nomessage">
+                    <img id="not-found" src="./assets/website-6482988_1280.png" alt="Not found">
+                        <p id="nofound_message">Ningún mensaje fue encontrado</p>
+                        <p id="input_text">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <div class="wrapper_encrypt_text_message">
+                    <p id="wrapper_encrypt_text_message_m"></p>
+                </div>
+            </div>
+            <div class="wrapper_encrypt_button">
+                <input type="submit" value="Copiar" class="copy_button button" onclick="copiarTexto();">
+                <p id="mensaje" style="color: green; display: none;">¡Texto copiado al portapapeles!</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <footer>
+            <p class="footer_txt">Elaborado por: Roberto Figueroa</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

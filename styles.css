@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --general_font: "Inter", sans-serif;
+    --general_color: #6c32ad;
+    --color-background: #6c32ad;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--general_font);
+    --color-background: aliceblue;
+    box-sizing: border-box;
+    padding: 15% 0 0% 0;
+    margin: 0px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+textarea::placeholder{
+    font-family: var(--general_font);
+    font-size: 1.5rem;
+    color: var(--general_color);
+    padding: 10px 0px 0px 10px;
+}
+.button{
+    width: 150px;
+    border: 1px solid var(--general_color);
+    font-family: var(--general_font);
+    font-size: 1rem;
+    border-radius: 24px;
+    padding: 24px;
+}
+.encrypt_button{
+    background-color: var(--general_color);
+    color: white;
+}
+.dencrypt_button{
+    background-color: white;
+    color: var(--general_color);
+}
+.copy_button{
+    background-color: white;
+    color: var(--general_color);
+    display: none;
+}
+#p_warning{
+    display: inline;
+}
+#nofound_message{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+#input_text{
+    font-size: 1rem;
+}
+.wrapper_encrypt_text{
+    text-align: center;
+}
+.wrapper_encrypt_text_nomessage{
+    color: white;
+}
+textarea{
+    padding: 20px 0px 0px 20px;
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    font-size: 30px;
+}
+.wrapper_noencrypt_rules{
+    margin: 5px 0px 20px;
+}
+.wrapper_noencrypt_txt_buttons{
+    justify-content: space-evenly;
+    display: flex;
+}
+.wrapper_noencrypt{
+    padding-bottom: 20px;
+    width: 90%;
+    box-sizing: border-box;
+    
+}
+.wrapper_encrypt{
+    padding-top: 40px;
+    border-radius: 100px 100px 100px 100px;
+    background-color: #6c32ad;
+    width: 100%;
+    padding-bottom: 40px;
+    height: 110%;
+}
+
+#not-found{
+    width: 100%;
+}
+#wrapper_encrypt_text_message_m{
+    display: none;
+    height: 500px;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+    padding: 50px 50px 50px;
+    font-size: 30px;
+    overflow: clip;
+    font-family: monospace;
+}
+.wrapper_encrypt_text_message{
+    padding: 0 10px 0;
+}
+.wrapper_encrypt_button{
+    text-align: center;
+    
+}
+.footer{
+    text-align: center;
+    background-color: #ecb41a;
+    height: auto;
+}
+footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer_txt{
+    margin: 0;
+}
+#logo{
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: girar 2s infinite;
+}
+
+@media(min-width: 1200px) {
+    body,html{
+        padding: 0;
+        margin: 0;
+    }
+    .wrapper{
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper_noencrypt, .wrapper_encrypt{
+        padding: 5% 8% 8%;
+        width: 50%;
+    }
+    .wrapper_encrypt{
+        max-height: 100%;
+        width: 40%;
+        padding: 2% 8% 2%;
+    }
+    .footer{
+        padding: 0;
+        margin: 0;
+    }
+    #logo{
+        font-size: 30px;
+    }
+}
+@keyframes girar {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+/* Definir la animación de escribir */
+@keyframes escribir {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+  
+  /* Animación para el parpadeo del cursor */
+  @keyframes parpadeoCursor {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: black;
+    }
+}
